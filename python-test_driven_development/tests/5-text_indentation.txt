@@ -1,0 +1,60 @@
+==============================
+How to use 5-text_indentation.py
+==============================
+
+Import function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with period:
+    >>> text_indentation("Hello.")
+    Hello.
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test with question mark:
+    >>> text_indentation("Hello?")
+    Hello?
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test with colon:
+    >>> text_indentation("Hello:")
+    Hello:
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test with spaces around delimiter:
+    >>> text_indentation("Hello.   World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Test not a string:
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Test missing argument:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test no delimiter:
+    >>> text_indentation("Holberton School")
+    Holberton School
+
+Test with period no space:
+    >>> text_indentation("Holberton.School")
+    Holberton.
+    <BLANKLINE>
+    School
+
+Test multiple delimiters:
+    >>> text_indentation("Holberton. School? How are you: John")
+    Holberton.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+    John
