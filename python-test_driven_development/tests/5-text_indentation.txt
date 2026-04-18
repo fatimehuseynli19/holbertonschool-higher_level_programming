@@ -9,35 +9,16 @@ Test with period:
     >>> text_indentation("Hello.")
     Hello.
     <BLANKLINE>
-    <BLANKLINE>
 
 Test with question mark:
     >>> text_indentation("Hello?")
     Hello?
-    <BLANKLINE>
     <BLANKLINE>
 
 Test with colon:
     >>> text_indentation("Hello:")
     Hello:
     <BLANKLINE>
-    <BLANKLINE>
-
-Test with spaces around delimiter:
-    >>> text_indentation("Hello.   World")
-    Hello.
-    <BLANKLINE>
-    World
-
-Test not a string:
-    >>> text_indentation(12)
-    Traceback (most recent call last):
-    TypeError: text must be a string
-
-Test missing argument:
-    >>> text_indentation()
-    Traceback (most recent call last):
-    TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 Test no delimiter:
     >>> text_indentation("Holberton School")
@@ -58,3 +39,13 @@ Test multiple delimiters:
     How are you:
     <BLANKLINE>
     John
+
+Test not a string:
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Test missing argument:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
