@@ -38,3 +38,8 @@ Test both floats:
 Test negative float:
     >>> add_integer(-1.9, 2)
     1
+
+Test NaN:
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
