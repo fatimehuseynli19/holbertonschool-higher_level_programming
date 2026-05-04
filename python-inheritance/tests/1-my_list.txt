@@ -1,0 +1,31 @@
+===========================
+How to use 1-my_list.py
+===========================
+
+Import:
+    >>> MyList = __import__('1-my_list').MyList
+
+Test empty list:
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Test normal list:
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.print_sorted()
+    [1, 2, 3]
+
+Test original not changed:
+    >>> print(my_list)
+    [3, 1, 2]
+
+Test negative numbers:
+    >>> my_list2 = MyList()
+    >>> my_list2.append(-1)
+    >>> my_list2.append(0)
+    >>> my_list2.append(-5)
+    >>> my_list2.print_sorted()
+    [-5, -1, 0]
