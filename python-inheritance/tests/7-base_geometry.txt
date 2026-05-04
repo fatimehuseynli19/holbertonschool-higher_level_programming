@@ -27,9 +27,9 @@ Negative value:
     ValueError: distance must be greater than 0
 
 Boolean value:
-    >>> bg.integer_validator("flag", True)
+    >>> bg.integer_validator("age", True)
     Traceback (most recent call last):
-    TypeError: flag must be an integer
+    TypeError: age must be an integer
 
 Float value:
     >>> bg.integer_validator("score", 3.5)
@@ -56,16 +56,22 @@ Dict value:
     Traceback (most recent call last):
     TypeError: dct must be an integer
 
+Set value:
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
 area method:
     >>> bg.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
 
-Missing args:
+Missing one arg:
     >>> bg.integer_validator("only_name")
     Traceback (most recent call last):
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+Missing all args:
     >>> bg.integer_validator()
     Traceback (most recent call last):
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
