@@ -8,6 +8,7 @@ Import:
 
 Valid integer:
     >>> bg.integer_validator("my_int", 12)
+
     >>> bg.integer_validator("width", 89)
 
 String value:
@@ -40,7 +41,31 @@ None value:
     Traceback (most recent call last):
     TypeError: data must be an integer
 
+List value:
+    >>> bg.integer_validator("lst", [1, 2])
+    Traceback (most recent call last):
+    TypeError: lst must be an integer
+
+Tuple value:
+    >>> bg.integer_validator("tpl", (1,))
+    Traceback (most recent call last):
+    TypeError: tpl must be an integer
+
+Dict value:
+    >>> bg.integer_validator("dct", {})
+    Traceback (most recent call last):
+    TypeError: dct must be an integer
+
 area method:
     >>> bg.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
+
+Missing args:
+    >>> bg.integer_validator("only_name")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
