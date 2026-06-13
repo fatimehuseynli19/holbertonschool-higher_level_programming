@@ -1,1 +1,1 @@
-# Python - Everything is object
+# Python Variable Annotations
